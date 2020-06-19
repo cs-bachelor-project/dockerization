@@ -33,8 +33,9 @@ services:
     tty: true
     ports:
       - 8000:8000
+    working_dir: /api/
     volumes:
-      - ./api:/api/
+      - ./api:/api
     depends_on:
       - postgres
       - redis
